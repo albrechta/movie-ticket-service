@@ -1,19 +1,16 @@
 package com.zuehlke.movieticketservice.movie;
 
 import com.zuehlke.movieticketservice.RestClientFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Component
 public class MovieServiceAdapter {
 
     private final MovieServiceApiClient moviesApiClient;
 
-    public MovieServiceAdapter(@Qualifier("movieServiceUrl") String url) {
+    public MovieServiceAdapter(String url) {
         moviesApiClient = RestClientFactory.createClient(url, MovieServiceApiClient.class);
     }
 
