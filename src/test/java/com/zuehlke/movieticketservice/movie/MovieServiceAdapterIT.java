@@ -1,6 +1,5 @@
 package com.zuehlke.movieticketservice.movie;
 
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.util.List;
@@ -11,7 +10,6 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasSize;
 
-// IntegrationTest
 public class MovieServiceAdapterIT {
 
     // Hystrix will be explained later in the course

@@ -26,15 +26,19 @@ public class MovieServiceAdapter {
     }
 
     public Optional<MovieDetail> getMovieById(long id) {
-        MovieServiceResponse response = moviesApiClient.getMovieById(id);
-        MovieDetail movieDetail = new MovieDetail();
-        movieDetail.setId(response.getId());
-        movieDetail.setTitle(response.getTitle());
-        movieDetail.setGenre(response.getGenre());
-        movieDetail.setPoster(response.getPoster());
-        movieDetail.setYear(response.getYear());
-        movieDetail.setPlot(response.getPlot());
-        return Optional.of(movieDetail);
+        try {
+            MovieServiceResponse response = moviesApiClient.getMovieById(id);
+            MovieDetail movieDetail = new MovieDetail();
+            movieDetail.setId(response.getId());
+            movieDetail.setTitle(response.getTitle());
+            movieDetail.setGenre(response.getGenre());
+            movieDetail.setPoster(response.getPoster());
+            movieDetail.setYear(response.getYear());
+            movieDetail.setPlot(response.getPlot());
+            return Optional.of(movieDetail);
+        } catch (Exception e) {
+            return Optional.empty();
+        }
     }
 
 }
