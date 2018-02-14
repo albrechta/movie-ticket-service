@@ -1,5 +1,6 @@
 package com.zuehlke.movieticketservice.movie;
 
+import com.zuehlke.movieticketservice.rating.Rating;
 import lombok.Data;
 
 import java.util.List;
