@@ -12,24 +12,6 @@ import java.util.List;
 @RequestMapping("api/v1/movies")
 public class MovieController {
 
-//    [
-//    {
-//        "id": 1,
-//            "title": "Batman Begins",
-//            "poster": ""
-//    },
-//    {
-//        "id": 2,
-//            "title": "Ted",
-//            "poster": ""
-//    },
-//    {
-//        "id": 3,
-//            "title": "Inception",
-//            "poster": ""
-//    }
-//]
-
     private static final List<Movie> MOVIES = new ArrayList<>();
     static {
         Movie m1 = new Movie();
