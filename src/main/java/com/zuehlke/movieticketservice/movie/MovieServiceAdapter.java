@@ -1,7 +1,10 @@
 package com.zuehlke.movieticketservice.movie;
 
 import com.zuehlke.movieticketservice.RestClientFactory;
+import feign.hystrix.FallbackFactory;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
