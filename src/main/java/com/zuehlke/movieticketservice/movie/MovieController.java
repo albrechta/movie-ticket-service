@@ -34,7 +34,7 @@ public class MovieController {
         List<Rating> ratings = ratingAdapter.getRatingsById(id);
         return movieDetail
                 .map(detail -> { detail.setRatings(ratings); return detail; })
-                .orElseThrow(() -> new RuntimeException(String.format("Movie with id=%d not found", id)));
+                .orElseThrow(() -> new MovieNotFoundException(String.format("Movie with id=%d not found", id)));
     }
 
 }
